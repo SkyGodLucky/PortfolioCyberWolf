@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-cyberwolf",
+  "version": "1.0.0",
+  "description": "Portfolio de Cyber Wolf",
+  "dependencies": {
+    "@emailjs/nodejs": "^3.11.0"
+  }
+}
