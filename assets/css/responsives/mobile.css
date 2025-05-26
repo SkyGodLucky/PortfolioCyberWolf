@@ -3,13 +3,11 @@
 
   html,
   body {
-    overflow-x: hidden;
     width: 100%;
     position: relative;
   }
 
   * {
-    max-width: 100%;
     box-sizing: border-box;
   }
 
@@ -35,8 +33,9 @@
 
   /* Ajustement des images */
   img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    object-fit: contain;
   }
 
   /* Ajustement des textes */
@@ -47,8 +46,27 @@
   h5,
   h6,
   p {
+    width: 100%;
     word-wrap: break-word;
-    overflow-wrap: break-word;
+  }
+
+  /* Ajustement des grilles et flexbox */
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    width: 100%;
   }
 
   /* Navbar */
@@ -463,11 +481,6 @@
   .portfolio p {
     font-size: 0.9rem;
     line-height: 1.5;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .project-card {
