@@ -211,6 +211,7 @@
     padding: 0;
   }
 
+
   /* Portfolio Section */
   .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
