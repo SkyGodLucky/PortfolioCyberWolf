@@ -111,7 +111,8 @@
 
   /* About Section */
   .about {
-    padding: 1.5rem 3rem;
+    padding: 2rem 3rem;
+    background-color: var(--light-bg);
   }
 
   .about-container {
@@ -127,21 +128,25 @@
 
   .about h2 {
     grid-area: title;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: center;
+    color: var(--light-text);
   }
 
   .about h3 {
     grid-area: title;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
     width: 100%;
     padding: 0;
     line-height: 1.4;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    color: var(--light-text);
   }
 
   .about-content {
@@ -152,7 +157,8 @@
     width: 100%;
   }
 
-  .about-left {
+  .about-left,
+  .about-right {
     grid-area: left;
     border: 2px solid var(--light-primary);
     border-radius: 15px;
@@ -160,16 +166,36 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+
   }
 
   .about-right {
     grid-area: right;
-    border: 2px solid var(--light-primary);
-    border-radius: 15px;
-    padding: 2rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  }
+
+  .about-left:hover,
+  .about-right:hover {
+    transform: translateY(-5px);
+  }
+
+  .about h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-primary);
+    text-align: center;
+  }
+
+  .about h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--light-text);
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    color: var(--light-text);
   }
 
   .about-skills {
@@ -180,63 +206,19 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: var(--light-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
   }
 
-  .about h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .about h5 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .about p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-  }
-
-  .rotating-words {
-    display: inline-flex;
-    position: relative;
-    width: auto;
-    min-width: 120px;
-    margin-left: 0.3rem;
-    height: 1.5em;
-    vertical-align: middle;
-    margin-top: 0;
-    align-items: center;
-  }
-
-  .rotating-words .word {
-    position: absolute;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--light-primary);
-    white-space: nowrap;
-    left: 0;
-    top: 0;
-    transform: none;
-    font-size: 1.25rem;
-  }
-
-  .rotating-words .word.active {
-    opacity: 1;
-    transform: none;
-  }
-
-  .rotating-words .word.inactive {
-    opacity: 0;
-    transform: translateY(-100%);
+  .about-skills:hover {
+    transform: translateY(-5px);
   }
 
   .about-skills h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--light-primary);
-    margin: 0 auto 1.2rem;
+    margin: 0 auto 1.5rem;
     font-weight: bolder;
     text-align: center;
     width: fit-content;
@@ -260,6 +242,47 @@
     width: 100%;
     text-align: center;
     padding: 0.3rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .about-skills li:hover {
+    color: var(--light-primary);
+  }
+
+  .rotating-words {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+    min-width: 120px;
+    margin-left: 0.5rem;
+    height: 1.5em;
+    vertical-align: middle;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .rotating-words .word {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--light-primary);
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+    transform: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .rotating-words .word.active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .rotating-words .word.inactive {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 
   /* Portfolio Section */
