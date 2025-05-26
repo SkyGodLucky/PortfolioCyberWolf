@@ -161,40 +161,27 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Validation du formulaire avant soumission
-  form.addEventListener('submit', async function (event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     if (validateForm()) {
-      try {
-        const formData = {
-          prenom: prenomInput.value,
-          nom: nomInput.value,
-          from_name: `${prenomInput.value} ${nomInput.value}`,
-          from_email: emailInput.value,
-          phone: phoneInput.value,
-          subject: sujetInput.value,
-          message: messageInput.value
-        };
+      const templateParams = {
+        prenom: prenomInput.value,
+        nom: nomInput.value,
+        from_name: `${prenomInput.value} ${nomInput.value}`,
+        from_email: emailInput.value,
+        phone: phoneInput.value,
+        subject: sujetInput.value,
+        message: messageInput.value
+      };
 
-        const response = await fetch('/.netlify/functions/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
+      emailjs.send('service_x8q3xsb', 'template_q1sn2le', templateParams)
+        .then(function (response) {
+          showPopup();
+          form.reset();
+        }, function (error) {
+          alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
         });
-
-        if (!response.ok) {
-          throw new Error('Erreur réseau');
-        }
-
-        const data = await response.json();
-        showPopup();
-        form.reset();
-      } catch (error) {
-        console.error('Erreur:', error);
-        alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
-      }
     }
   });
 
