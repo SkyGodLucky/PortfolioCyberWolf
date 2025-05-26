@@ -2,6 +2,9 @@
   "name": "portfolio-cyberwolf",
   "version": "1.0.0",
   "description": "Portfolio de Cyber Wolf",
+  "scripts": {
+    "build": "echo 'Build completed'"
+  },
   "dependencies": {
     "@emailjs/nodejs": "^3.11.0"
   }

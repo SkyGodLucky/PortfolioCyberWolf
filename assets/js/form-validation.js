@@ -175,11 +175,19 @@ document.addEventListener('DOMContentLoaded', function () {
         message: messageInput.value
       };
 
-      emailjs.send(netlifyConfig.emailjs.serviceId, netlifyConfig.emailjs.templateId, templateParams)
-        .then(function (response) {
+      fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(templateParams)
+      })
+        .then(response => response.json())
+        .then(data => {
           showPopup();
           form.reset();
-        }, function (error) {
+        })
+        .catch(error => {
           alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
         });
     }
