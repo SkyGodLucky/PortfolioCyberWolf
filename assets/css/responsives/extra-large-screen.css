@@ -1,5 +1,9 @@
 /* Styles pour les très grands écrans (min-width: 1400px) */
 @media screen and (min-width: 1400px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
 
   /* Navbar */
   .navbar {
