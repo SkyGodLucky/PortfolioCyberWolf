@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init("YOUR_PUBLIC_KEY");
+  emailjs.init('MTwhFQ8nLLVPOysUI');
 }); 
