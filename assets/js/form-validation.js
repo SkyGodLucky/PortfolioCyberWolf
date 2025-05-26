@@ -167,20 +167,23 @@ document.addEventListener('DOMContentLoaded', function () {
     if (validateForm()) {
       try {
         const templateParams = {
-          from_name: document.getElementById('name').value,
-          from_email: document.getElementById('email').value,
-          subject: document.getElementById('subject').value,
-          message: document.getElementById('message').value
+          prenom: prenomInput.value,
+          nom: nomInput.value,
+          from_name: `${prenomInput.value} ${nomInput.value}`,
+          from_email: emailInput.value,
+          phone: phoneInput.value,
+          subject: sujetInput.value,
+          message: messageInput.value
         };
 
         const response = await emailjs.send(
-          'service_cyberwolf',
-          'template_cyberwolf',
+          'service_x8q3xsb',
+          'template_q1sn2le',
           templateParams
         );
 
         showPopup('success', 'Message envoyé avec succès !');
-        resetForm();
+        form.reset();
       } catch (error) {
         showPopup('error', 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
       }
