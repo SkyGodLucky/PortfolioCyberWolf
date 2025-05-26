@@ -1,9 +1,19 @@
-/* Styles pour les grands écrans (min-width: 1025px) */
-@media screen and (min-width: 1025px) {
+/* Styles pour les très grands écrans (min-width: 1400px) */
+@media screen and (min-width: 1400px) {
+  html {
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 90px !important;
+  }
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
 
   /* Navbar */
   .navbar {
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
     height: 90px;
   }
 
@@ -13,28 +23,29 @@
   }
 
   .nav-links {
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   /* CW Section */
   .CW {
-    padding: 2rem 3rem;
+    padding: 2rem 5rem;
     margin-top: 90px;
     min-height: calc(100vh - 90px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
   }
 
   .CW-left {
-    max-width: 50%;
+    max-width: 45%;
     z-index: 2;
     position: relative;
   }
 
   .CW-left h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -42,42 +53,41 @@
   }
 
   .CW-left h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
     color: var(--light-primary);
   }
 
   .CW-left p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
   }
 
   .CW-buttons {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2rem;
+    margin-top: 2.5rem;
   }
 
   .CW-buttons .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-    min-width: 180px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 200px;
   }
 
   .CW-buttons .btn.github {
-    padding: 0.8rem;
+    padding: 1rem;
     min-width: auto;
   }
 
   .CW-buttons .btn.github img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   .CW-right {
-    max-width: 45%;
-    right: 0;
+    max-width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,24 +98,26 @@
   }
 
   .CW-right img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     object-fit: contain;
-    transform: scale(1.1);
+    transform: scale(1);
     transition: transform 0.3s ease;
   }
 
   .CW-right img:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
   }
 
   /* About Section */
   .about {
-    padding: 1.5rem 3rem;
+    padding: 2rem 5rem;
   }
 
-  .about-content {
-    gap: 2rem;
+  .about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 1.5rem;
   }
 
   .about h2 {
@@ -114,7 +126,7 @@
   }
 
   .about h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     text-align: left;
     width: 100%;
@@ -123,6 +135,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .rotating-words {
@@ -146,34 +159,51 @@
     white-space: nowrap;
     left: 0;
     top: 0;
-    transform: none;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .rotating-words .word.active {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
   }
 
   .rotating-words .word.inactive {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-20px);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .about-left,
+  .about-right {
+    border: 2px solid var(--light-primary);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .about h4 {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 
   .about h5 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
   }
 
   .about p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .about-skills {
@@ -182,11 +212,11 @@
     border-radius: 15px;
     padding: 2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
   }
 
   .about-skills h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--light-primary);
     margin: 0 auto 1.2rem;
     font-weight: bolder;
@@ -211,87 +241,37 @@
     padding: 0;
   }
 
+  .about-skills li:hover {
+    transform: translateX(5px);
+  }
+
   /* Portfolio Section */
   .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  .portfolio h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .portfolio h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    gap: 3rem;
+    padding: 3rem;
   }
 
   /* Contact Section */
   .contact {
-    padding: 1.5rem 3rem;
+    padding: 2rem 5rem;
   }
 
   .contact-container {
-    max-width: 700px;
-  }
-
-  .contact h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .form-group label {
-    font-size: 0.95rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.95rem;
-  }
-
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    font-size: 0.85rem;
-  }
-
-  #contact-form button {
-    font-size: 0.95rem;
-  }
-
-  .popup h3 {
-    font-size: 1.4rem;
-  }
-
-  .popup p {
-    font-size: 0.95rem;
-  }
-
-  .popup .btn {
-    font-size: 0.95rem;
-  }
-
-  .copyright {
-    font-size: 0.95rem;
+    max-width: 800px;
   }
 
   /* Footer */
   .footer-content {
-    padding: 0 3rem;
+    padding: 0 5rem;
   }
 
   .social-links {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .logo-langages {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   /* Animation Cyber Wolf */
@@ -337,5 +317,68 @@
   body.dark-mode .cyber {
     color: var(--dark-primary);
     border-right-color: var(--dark-primary);
+  }
+
+  .portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    font-size: 0.9rem;
+  }
+
+  #contact-form button {
+    font-size: 1rem;
+  }
+
+  .popup h3 {
+    font-size: 1.3rem;
+  }
+
+  .popup p {
+    font-size: 1rem;
+  }
+
+  .popup .btn {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+
+  /* Rotating Words */
+  .rotating-words .word {
+    font-size: 1.3rem;
+  }
+
+  .rotating-words-portfolio .word-portfolio {
+    font-size: 1.3rem;
   }
 }
