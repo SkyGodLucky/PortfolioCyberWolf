@@ -206,26 +206,20 @@
   }
 
   .about-skills ul {
+    color: var(--light-text);
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
   .about-skills li {
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    background-color: var(--light-background);
-    border: 1px solid var(--light-primary);
-    border-radius: 20px;
-    transition: all 0.3s ease;
-  }
-
-  .about-skills li:hover {
-    transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
   }
 
   /* Portfolio Section */
