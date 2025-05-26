@@ -2,23 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // Sélectionner tous les liens internes (navigation et boutons)
   const internalLinks = document.querySelectorAll('a[href^="#"]');
 
-  // Fonction pour le défilement fluide
+  // Fonction pour le défilement constant
   function smoothScroll(targetPosition, duration) {
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
-    let startTime = null;
+    const startTime = performance.now();
+    const speed = Math.abs(distance / duration); // Vitesse constante
 
     function animation(currentTime) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      const easeInOutCubic = progress < 0.5
-        ? 4 * progress * progress * progress
-        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
 
-      window.scrollTo(0, startPosition + distance * easeInOutCubic);
+      // Défilement linéaire (vitesse constante)
+      window.scrollTo(0, startPosition + distance * progress);
 
-      if (timeElapsed < duration) {
+      if (progress < 1) {
         requestAnimationFrame(animation);
       }
     }
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (targetSection) {
         const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - 90;
-        smoothScroll(targetPosition, 1000); // 1000ms = 1 seconde pour l'animation
+        smoothScroll(targetPosition, 400); // Durée réduite pour un défilement plus rapide
       }
     });
   });
