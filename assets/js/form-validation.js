@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
 
     if (validateForm()) {
-      const templateParams = {
+      const formData = {
         prenom: prenomInput.value,
         nom: nomInput.value,
         from_name: `${prenomInput.value} ${nomInput.value}`,
@@ -180,14 +180,20 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(templateParams)
+        body: JSON.stringify(formData)
       })
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur réseau');
+          }
+          return response.json();
+        })
         .then(data => {
           showPopup();
           form.reset();
         })
         .catch(error => {
+          console.error('Erreur:', error);
           alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
         });
     }
