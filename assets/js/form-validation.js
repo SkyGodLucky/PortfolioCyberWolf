@@ -163,8 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Validation du formulaire avant soumission
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+    console.log('Formulaire soumis, validation en cours...');
 
     if (validateForm()) {
+      console.log('Formulaire valide, préparation de l\'envoi...');
       const templateParams = {
         prenom: prenomInput.value,
         nom: nomInput.value,
@@ -174,14 +176,19 @@ document.addEventListener('DOMContentLoaded', function () {
         subject: sujetInput.value,
         message: messageInput.value
       };
+      console.log('Paramètres du template:', templateParams);
 
       emailjs.send('service_x8q3xsb', 'template_q1sn2le', templateParams)
         .then(function (response) {
+          console.log('Email envoyé avec succès:', response);
           showPopup();
           form.reset();
         }, function (error) {
+          console.error('Erreur détaillée EmailJS:', error);
           alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
         });
+    } else {
+      console.log('Formulaire invalide, envoi annulé');
     }
   });
 
