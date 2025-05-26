@@ -1,3 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init('MTwhFQ8nLLVPOysUI');
+  try {
+    emailjs.init('MTwhFQ8nLLVPOysUI');
+  } catch (error) {
+    console.error('Erreur lors de l\'initialisation d\'EmailJS:', error);
+  }
 }); 
