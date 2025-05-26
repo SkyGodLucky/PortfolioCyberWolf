@@ -161,41 +161,40 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Validation du formulaire avant soumission
-  form.addEventListener('submit', function (event) {
+  form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     if (validateForm()) {
-      const formData = {
-        prenom: prenomInput.value,
-        nom: nomInput.value,
-        from_name: `${prenomInput.value} ${nomInput.value}`,
-        from_email: emailInput.value,
-        phone: phoneInput.value,
-        subject: sujetInput.value,
-        message: messageInput.value
-      };
+      try {
+        const formData = {
+          prenom: prenomInput.value,
+          nom: nomInput.value,
+          from_name: `${prenomInput.value} ${nomInput.value}`,
+          from_email: emailInput.value,
+          phone: phoneInput.value,
+          subject: sujetInput.value,
+          message: messageInput.value
+        };
 
-      fetch('/.netlify/functions/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Erreur réseau');
-          }
-          return response.json();
-        })
-        .then(data => {
-          showPopup();
-          form.reset();
-        })
-        .catch(error => {
-          console.error('Erreur:', error);
-          alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+        const response = await fetch('/.netlify/functions/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
         });
+
+        if (!response.ok) {
+          throw new Error('Erreur réseau');
+        }
+
+        const data = await response.json();
+        showPopup();
+        form.reset();
+      } catch (error) {
+        console.error('Erreur:', error);
+        alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+      }
     }
   });
 
