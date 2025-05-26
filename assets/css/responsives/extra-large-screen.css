@@ -1,8 +1,14 @@
 /* Styles pour les très grands écrans (min-width: 1400px) */
 @media screen and (min-width: 1400px) {
   html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 90px !important;
+  }
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Navbar */

@@ -12,10 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        // Faire défiler jusqu'à la section cible
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        // Calculer la position de la section cible
+        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - 90;
+
+        // Faire défiler jusqu'à la section cible avec une animation fluide
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
         });
       }
     });
