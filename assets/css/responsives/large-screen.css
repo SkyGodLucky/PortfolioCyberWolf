@@ -114,30 +114,25 @@
     padding: 1.5rem 3rem;
   }
 
-  .about-content {
+  .about-container {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title title"
+      "left right"
+      "skills skills";
     gap: 2rem;
-    margin-top: 1.5rem;
-    width: 100%;
-  }
-
-  .about-left,
-  .about-right {
-    border: 2px solid var(--light-primary);
-    border-radius: 15px;
-    padding: 2rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
   }
 
   .about h2 {
+    grid-area: title;
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
 
   .about h3 {
+    grid-area: title;
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -147,6 +142,60 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .about-content {
+    grid-area: left / right;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .about-left {
+    grid-area: left;
+    border: 2px solid var(--light-primary);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-right {
+    grid-area: right;
+    border: 2px solid var(--light-primary);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-skills {
+    grid-area: skills;
+    border: 2px solid var(--light-primary);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
   }
 
   .rotating-words {
@@ -184,34 +233,6 @@
     transform: translateY(-100%);
   }
 
-  .about h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .about h5 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .about p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-  }
-
-  .about-skills {
-    margin: 2rem auto 0;
-    border: 2px solid var(--light-primary);
-    border-radius: 15px;
-    padding: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
   .about-skills h3 {
     font-size: 1.4rem;
     color: var(--light-primary);
@@ -231,12 +252,14 @@
     align-items: center;
     flex: 1;
     justify-content: center;
+    gap: 0.5rem;
   }
 
   .about-skills li {
     font-size: 1rem;
     width: 100%;
     text-align: center;
+    padding: 0.3rem 0;
   }
 
   /* Portfolio Section */
@@ -448,9 +471,12 @@
   .about-container {
     max-width: 1400px;
     margin: 0 auto;
-    gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "left right"
+      "skills skills";
+    gap: 2rem;
   }
 
   .about h3 {
