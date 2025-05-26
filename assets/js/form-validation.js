@@ -161,34 +161,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Validation du formulaire avant soumission
-  form.addEventListener('submit', function (event) {
+  form.addEventListener('submit', async function (event) {
     event.preventDefault();
-    console.log('Formulaire soumis, validation en cours...');
 
     if (validateForm()) {
-      console.log('Formulaire valide, préparation de l\'envoi...');
-      const templateParams = {
-        prenom: prenomInput.value,
-        nom: nomInput.value,
-        from_name: `${prenomInput.value} ${nomInput.value}`,
-        from_email: emailInput.value,
-        phone: phoneInput.value,
-        subject: sujetInput.value,
-        message: messageInput.value
-      };
-      console.log('Paramètres du template:', templateParams);
+      try {
+        const templateParams = {
+          from_name: document.getElementById('name').value,
+          from_email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+        };
 
-      emailjs.send('service_x8q3xsb', 'template_q1sn2le', templateParams)
-        .then(function (response) {
-          console.log('Email envoyé avec succès:', response);
-          showPopup();
-          form.reset();
-        }, function (error) {
-          console.error('Erreur détaillée EmailJS:', error);
-          alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
-        });
-    } else {
-      console.log('Formulaire invalide, envoi annulé');
+        const response = await emailjs.send(
+          'service_cyberwolf',
+          'template_cyberwolf',
+          templateParams
+        );
+
+        showPopup('success', 'Message envoyé avec succès !');
+        resetForm();
+      } catch (error) {
+        showPopup('error', 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+      }
     }
   });
 
