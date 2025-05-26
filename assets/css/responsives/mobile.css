@@ -122,10 +122,19 @@
 
   /* Menu Burger */
   .burger-btn {
+    display: block;
     font-size: 1rem;
+    cursor: pointer;
+    color: var(--light-text);
+    z-index: 1001;
     padding: 0.3rem;
+    transition: color 0.3s ease;
+    position: relative;
     width: 25px;
     height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .burger-btn:hover {
