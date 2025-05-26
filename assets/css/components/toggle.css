@@ -1,0 +1,580 @@
+/* ===== Global Theme Transition ===== */
+body {
+  transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease;
+}
+
+body * {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* ===== Toggle Switch ===== */
+
+/* Base Structure */
+input[type=checkbox] {
+  display: none;
+}
+
+.display {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+/* Toggle Container */
+.display label {
+  width: 50px;
+  height: 26px;
+  background: var(--light-primary);
+  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* Toggle Circle */
+.circle {
+  width: 20px;
+  height: 20px;
+  background: var(--light-background);
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Icons */
+.sun,
+.moon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  transition: 0.4s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sun {
+  color: var(--light-primary);
+  opacity: 1;
+}
+
+.moon {
+  color: var(--light-background);
+  opacity: 0;
+  transform: translate(-50%, 100%);
+}
+
+/* Toggle States */
+input[type=checkbox]:checked+.display label .circle {
+  left: 27px;
+}
+
+input[type=checkbox]:checked+.display label .sun {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+
+input[type=checkbox]:checked+.display label .moon {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* Active State */
+label:active .circle {
+  width: 28px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Dark Mode Styles ===== */
+
+/* Base Styles */
+body.dark-mode {
+  background-image: radial-gradient(circle at 7% 60%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 44%, transparent 44%, transparent 100%), radial-gradient(circle at 66% 79%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 31%, transparent 31%, transparent 100%), radial-gradient(circle at 25% 6%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 44%, transparent 44%, transparent 100%), radial-gradient(circle at 18% 89%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 37%, transparent 37%, transparent 100%), radial-gradient(circle at 33% 2%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 73%, transparent 73%, transparent 100%), linear-gradient(0deg, rgb(28, 31, 38), rgb(28, 31, 38));
+  color: var(--dark-text);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: var(--dark-title);
+}
+
+/* ===== Navigation ===== */
+
+/* Navbar Links */
+body.dark-mode .nav-links a {
+  color: var(--dark-text);
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .nav-links a::after {
+  background-color: var(--dark-primary);
+}
+
+/* Contact Button */
+body.dark-mode .nav-links li:last-child a {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .nav-links li:last-child a:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(205, 163, 79, 0.2);
+}
+
+body.dark-mode .nav-links li:last-child a:hover::after {
+  display: none;
+}
+
+/* ===== CW Section ===== */
+
+/* Logo */
+body:not(.dark-mode) .logo img {
+  filter: brightness(0);
+}
+
+body.dark-mode .logo img {
+  filter: none;
+}
+
+/* CW Section Buttons */
+body.dark-mode .CW-buttons .btn.gold {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+}
+
+body.dark-mode .CW-buttons .btn.ghost {
+  border: 2px solid var(--dark-primary);
+  color: var(--dark-primary);
+}
+
+body.dark-mode .CW-buttons .btn.github {
+  background: none;
+  border: none;
+}
+
+body.dark-mode .CW-buttons .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(205, 163, 79, 0.2);
+}
+
+body.dark-mode .CW-buttons .btn.github:hover {
+  box-shadow: none;
+}
+
+/* CW Section Text */
+body.dark-mode .CW-left h1 {
+  color: var(--dark-title);
+}
+
+body.dark-mode .cyber {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .CW-left h2 {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .CW-left p {
+  color: var(--dark-text);
+}
+
+/* ===== Theme Toggle Dark Mode ===== */
+
+/* Display Label */
+body.dark-mode .display label {
+  background: var(--dark-background);
+}
+
+/* Circle */
+body.dark-mode .circle {
+  background: var(--dark-primary);
+}
+
+/* Checked States */
+body.dark-mode input[type=checkbox]:checked+.display label {
+  background: #0b0c0f;
+}
+
+body.dark-mode input[type=checkbox]:checked+.display label .circle {
+  background: var(--dark-background);
+}
+
+/* Icons */
+body.dark-mode .sun {
+  color: var(--dark-background);
+}
+
+body.dark-mode .moon {
+  color: #FFFFFF;
+}
+
+/* About Section */
+body.dark-mode .about h3 {
+  color: var(--dark-text);
+}
+
+/* ===== About Section Dark Mode ===== */
+body.dark-mode .about h2 {
+  color: var(--dark-title);
+}
+
+body.dark-mode .about h4 {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .about h5 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .about p {
+  color: var(--dark-text);
+}
+
+body.dark-mode .about p span {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .about-left,
+body.dark-mode .about-right {
+  border-color: var(--dark-primary);
+}
+
+body.dark-mode .about-skills h3 {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .about-skills li {
+  color: var(--dark-text);
+}
+
+/* Contact section dark mode */
+.dark-mode .contact {
+  background-color: var(--dark-bg);
+}
+
+.dark-mode .contact h2 {
+  color: var(--dark-title);
+}
+
+.dark-mode .contact h3 {
+  color: var(--dark-text);
+}
+
+.dark-mode #contact-form {
+  background-color: rgba(28, 31, 38, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .form-group label {
+  color: var(--dark-title);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: rgba(28, 31, 38, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--dark-text);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05),
+    0 0 0 2px var(--dark-primary) !important;
+  border: none;
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+  color: var(--dark-text);
+  opacity: 0.7;
+}
+
+.dark-mode #contact-form button {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode #contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode #contact-form button:active {
+  transform: scale(0.98);
+}
+
+.dark-mode .form-group input:invalid,
+.dark-mode .form-group textarea:invalid {
+  border-color: var(--dark-error);
+}
+
+.dark-mode .form-group input:invalid:focus,
+.dark-mode .form-group textarea:invalid:focus {
+  box-shadow: 0 0 10px rgba(205, 163, 79, 0.3) !important;
+  border: 2px solid var(--dark-primary) !important;
+}
+
+/* Mode sombre pour la pop-up */
+body.dark-mode .popup-content {
+  background-color: rgba(28, 31, 38, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .popup h3 {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .popup p {
+  color: var(--dark-text);
+}
+
+body.dark-mode .popup .btn {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+body.dark-mode .popup .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .popup .btn:active {
+  transform: scale(0.98);
+}
+
+body.dark-mode .popup-icon {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+/* Mode sombre pour le footer */
+body.dark-mode .footer {
+  background-color: var(--dark-background);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .social-link {
+  background-color: rgba(28, 31, 38, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .social-icon {
+  filter: brightness(0.9);
+}
+
+body.dark-mode .social-link:hover .social-icon {
+  filter: brightness(1.2);
+}
+
+body.dark-mode .copyright {
+  color: var(--dark-text);
+  opacity: 0.9;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .language-btn.active {
+  box-shadow: 0 0 0 1px var(--dark-primary);
+}
+
+/* Mode sombre pour la navbar */
+body.dark-mode .navbar {
+  background-color: var(--dark-background);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Section */
+body.dark-mode .portfolio h2 {
+  color: var(--dark-title);
+}
+
+body.dark-mode .portfolio h3 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .portfolio p {
+  color: var(--dark-text);
+}
+
+body.dark-mode .logo-langages img[alt="PHP"],
+body.dark-mode .logo-langages img[alt="MySQL"],
+body.dark-mode .logo-langages img[alt="Node.js"] {
+  filter: brightness(0) invert(1);
+}
+
+/* Toggle Container */
+#toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-background);
+  transition: .4s;
+  border-radius: 34px;
+  border: 2px solid var(--light-primary);
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--light-primary);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.toggle-slider {
+  background-color: var(--dark-background);
+  border-color: var(--dark-primary);
+}
+
+input:checked+.toggle-slider:before {
+  transform: translateX(26px);
+  background-color: var(--dark-primary);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
+
+body.dark-mode .navbar {
+  background-color: var(--dark-background);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+body.dark-mode .nav-links a {
+  color: var(--dark-text);
+}
+
+body.dark-mode .nav-links a:hover {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .project-card {
+  background-color: var(--dark-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-info h3 {
+  color: var(--dark-title);
+}
+
+body.dark-mode .project-info p {
+  color: var(--dark-text);
+}
+
+body.dark-mode .tag {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+}
+
+body.dark-mode .project-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .project-link {
+  color: var(--dark-primary);
+}
+
+/* Toggle Icons */
+.toggle-icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  pointer-events: none;
+}
+
+.toggle-icons i {
+  color: var(--light-primary);
+  font-size: 16px;
+}
+
+body.dark-mode .toggle-icons i {
+  color: var(--dark-primary);
+}
+
+/* Toggle Animation */
+.toggle-slider:before {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-slider {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

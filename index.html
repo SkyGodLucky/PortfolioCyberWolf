@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Cyber Wolf - Développeur Web et Web Mobile">
+  <meta name="keywords" content="développeur web, portfolio, cyber wolf, développement web, fullstack">
+  <title>Portfolio Cyber Wolf</title>
+
+  <link rel="website icon" type="png" href="assets/images/Identity/Logo_CDA34F.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;800&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components/toggle.css" />
+  <link rel="stylesheet" href="assets/css/components/language.css" />
+  <link rel="stylesheet" href="assets/css/components/portfolio.css" />
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="assets/css/responsives/mobile.css" />
+  <link rel="stylesheet" href="assets/css/responsives/tablet.css" />
+  <link rel="stylesheet" href="assets/css/responsives/large-screen.css" />
+  <link rel="stylesheet" href="assets/css/responsives/extra-large-screen.css" />
+</head>
+
+<body>
+  <!-- Point d'ancrage pour le scroll -->
+  <div id="top"></div>
+  <div class="overlay-menu-mobile" onclick="toggleMobileMenu()"></div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#top">
+          <img src="./assets/images/Identity/Logo_CDA34F.png" alt="Logo Cyber Wolf">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#top" data-translate="nav_home">Accueil</a></li>
+        <li><a href="#about" data-translate="nav_about">À propos</a></li>
+        <li><a href="#portfolio" data-translate="nav_portfolio">Portfolio</a></li>
+        <li><a href="#contact" data-translate="nav_contact">Me contacter</a></li>
+      </ul>
+      <!-- Language Selector -->
+      <div id="language-container"></div>
+      <!-- Toggle Component -->
+      <div id="toggle-container"></div>
+      <div class="burger-btn" onclick="toggleMobileMenu()">
+        <span class="burger-icon">&#9776;</span>
+      </div>
+      <div class="menu-mobile" id="menu-mobile">
+        <ul class="nav-links">
+          <li><a href="#top" data-translate="nav_home">Accueil</a></li>
+          <li><a href="#about" data-translate="nav_about">À propos</a></li>
+          <li><a href="#portfolio" data-translate="nav_portfolio">Portfolio</a></li>
+          <li><a href="#contact" data-translate="nav_contact">Me contacter</a></li>
+        </ul>
+        <div class="menu-mobile-controls">
+          <div id="language-container-mobile"></div>
+          <div id="toggle-container-mobile"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="CW" class="CW">
+    <div class="CW-left">
+      <h1>Bonjour, je suis <span class="cyber">Cyber Wolf</span></h1>
+      <h2>Développeur Web</h2>
+      <p>
+        Fort d'une expérience solide au sein de l'armée française, je me suis orienté avec passion vers le développement
+        Web.<br> Initialement formé à la logistique, j'ai su faire preuve d'initiative en accompagnant les techniciens
+        informatiques de ma base, éveillant ainsi un intérêt profond pour les technologies numériques.<br> Rigoureux,
+        curieux et résolument tourné vers l'avenir, je poursuis aujourd'hui une formation spécialisée en développement
+        Web et Web Mobile au sein de l'école RI7, avec l'ambition affirmée de faire du code mon nouveau terrain
+        d'excellence.
+      </p>
+      <div class="CW-buttons">
+        <a href="./assets/documents/Sébastien POLLION CV DWWM.pdf" class="btn gold"
+          download="CV_CyberWolf.pdf">Curriculum Vitae</a>
+        <a href="#contact" class="btn ghost">Me contacter</a>
+        <a href="https://github.com/SkyGodLucky?tab=repositories" target="_blank" class="btn github"
+          aria-label="Lien GitHub">
+          <img src="./assets/images/Icons_footer/signe-github.png" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+    <div class="CW-right">
+      <img src="assets/images/Identity/Fond Accueil.png" alt="Illustration Loup" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2>À propos</h2>
+      <h3>Développeur Web et Web Mobile alliant <span class="rotating-words"><span class="word">performance</span><span
+            class="word">réactivité</span><span class="word">créativité</span></span></h3>
+
+      <div class="about-content">
+        <div class="about-left">
+          <h4>Formations</h4>
+          <ul>
+            <li>
+              <h5>Formation Développeur Web et Web Mobile</h5>
+              <p>RI7 - <span>2025</span></p>
+            </li>
+            <li>
+              <h5>Baccalauréat Général Scientifique</h5>
+              <p>Lycée Antonin Artaud - <span>2016</span></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-right">
+          <h4>Expériences</h4>
+          <ul>
+            <li>
+              <h5>Ouvrier d'Etat en Logistique et en Pyrotechnie</h5>
+              <p>Service Interarmées de la Santé et des Munitions - <span>2018 - 2025</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="about-skills">
+      <h3>Compétences transverses</h3>
+      <ul>
+        <li>
+          Manager une équipe
+        </li>
+        <li>
+          Organisation et gestion de projet
+        </li>
+        <li>
+          Travail en équipe
+        </li>
+        <li>
+          Rigueur, précision et respect des procédures
+        </li>
+        <li>
+          Esprit d'analyse et de résolution de problèmes
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <h3>Mes langages de programmation maitrisés : <span class="rotating-words-portfolio">
+        <span class="word-portfolio">HTML 5</span>
+        <span class="word-portfolio">CSS 3</span>
+        <span class="word-portfolio">JavaScript</span>
+        <span class="word-portfolio">PHP</span>
+        <span class="word-portfolio">Bootstrap</span>
+        <span class="word-portfolio">Figma</span>
+        <span class="word-portfolio">MySQL</span>
+        <span class="word-portfolio">MongoDB</span>
+        <span class="word-portfolio">Node.js</span>
+    </h3>
+    <div class="logo-langages">
+      <img src="./assets/images/Icons_language/icons8-html-5-48.png" alt="HTML5" />
+      <img src="./assets/images/Icons_language/icons8-css3-48.png" alt="CSS3" />
+      <img src="./assets/images/Icons_language/icons8-javascript-48.png" alt="JavaScript" />
+      <img src="./assets/images/Icons_language/icons8-logo-php-50.png" alt="PHP" />
+      <img src="./assets/images/Icons_language/icons8-bootstrap-48.png" alt="Bootstrap" />
+      <img src="./assets/images/Icons_language/icons8-figma-48.png" alt="Figma" />
+      <img src="./assets/images/Icons_language/icons8-logo-de-mysql-50.png" alt="MySQL" />
+      <img src="./assets/images/Icons_language/icons8-mongo-db-48.png" alt="MongoDB" />
+      <img src="./assets/images/Icons_language/icons8-nœud-js-32.png" alt="Node.js" />
+    </div>
+    <div class="portfolio-container">
+      <div class="portfolio-grid">
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 115613.png" alt="Jeu du Pendu">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/LePendu.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Le Pendu</h3>
+            <p>Jeu du pendu interactif développé en HTML, CSS et JavaScript. Intégration d'une API pour la génération
+              aléatoire de mots, système de score, animations fluides et interface responsive.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-04-14 224748.png" alt="Labyrinthe">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Dossier-Projet-Labyrinthe.git" class="project-link"
+                  target="_blank"><span class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Labyrinthe</h3>
+            <p>Labyrinthe interactif développé en PHP, CSS. Interface intuitive, animations fluides, darkmode,
+              lightmode, modification de la langue et génération de labyrinthe aléatoire.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 120650.png" alt="Site Staffy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Site-Staffy.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Site Staffordshire Bull Terrier</h3>
+            <p>Site vitrine dédié aux Staffordshire Bull Terrier, développé en HTML et CSS. Projet personnel réalisé
+              dans le cadre de ma formation en développement web.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 120543.png" alt="Site pour développeur">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Projet_HTML_CSS.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Site pour développeur</h3>
+            <p>Plateforme de présentation du métier de développeur web et de mon parcours d'apprentissage. Développé en
+              HTML, CSS et JavaScript.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 120411.png" alt="To-Do List">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/ToDoList.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>To-Do List</h3>
+            <p>Application de gestion de tâches interactive développée en HTML, CSS et JavaScript. Projet réalisé dans
+              le cadre de ma formation en développement web.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 6 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 120252.png" alt="Space Invaders">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/SpaceInvader.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Space Invaders</h3>
+            <p>Jeu inspiré du classique Space Invaders, développé en JavaScript. Intègre un système de score, des
+              contrôles au clavier pour les déplacements et les tirs.</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 7 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 115746.png" alt="Quiz Sherlock Holmes">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Quiz.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Quiz Sherlock Holmes</h3>
+            <p>Quiz interactif sur l'univers de Sherlock Holmes, développé en JavaScript. Inclut un système de score et
+              des questions variées sur la série.</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 8 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 115702.png"
+              alt="Jeu morpion et puissance 4">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Morpion.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Jeu morpion et puissance 4</h3>
+            <p>Jeu de morpion et de puissance 4 développé en HTML, CSS et JavaScript. Il permet de jouer contre
+              l'ordinateur ou contre un autre joueur.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 9 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-04-14 224842.png" alt="CRUD">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Project-MySQL.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>CRUD</h3>
+            <p>CRUD développé en PHP, CSS et MySQL. Il permet de créer, lire, mettre à jour et supprimer des données
+              dans une base de données.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 10 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 115506.png" alt="Jeu de la vie">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Jeu-de-la-Vie.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Jeu de la vie</h3>
+            <p>Jeu de la vie développé en HTML, CSS et JavaScript. Il respecte les règles originelles et a été réalisé
+              dans le cadre d'un devoir pour ma formation.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 11 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/Screen_Projects/Capture d'écran 2025-03-20 115344.png" alt="Aim Trainer">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/SkyGodLucky/Aim-Trainer.git" class="project-link" target="_blank"><span
+                    class="fab fa-github"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Aim Trainer</h3>
+            <p>Site permettant de s'entraîner à la visée pour des FPS. Développé en HTML, CSS et JavaScript.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Me contacter</h2>
+      <h3>Si besoin n'hésitez pas à me contacter via le formulaire ci-dessous</h3>
+
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="ex: Dupont" required>
+          </div>
+
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="ex: Jean" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="ex: jean.dupont@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="ex: 06 12 34 56 78 ou +33 6 12 34 56 78"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="sujet" data-translate="subject">Sujet</label>
+          <input type="text" id="sujet" name="sujet" placeholder="ex: Proposition de projet"
+            data-translate-placeholder="subject_placeholder" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" data-translate="message">Message</label>
+          <textarea id="message" name="message" rows="8" placeholder="Écrivez votre message ici..."
+            data-translate-placeholder="messagePlaceholder" required></textarea>
+        </div>
+
+        <button type="submit" class="btn gold">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://github.com/SkyGodLucky?tab=repositories" target="_blank" class="social-link">
+          <img src="assets/images/Icons_footer/signe-github.png" alt="GitHub" class="social-icon"
+            data-translate="footer_github">
+        </a>
+        <a href="https://www.linkedin.com/in/sébastien-pollion-46807a322" target="_blank" class="social-link">
+          <img src="assets/images/Icons_footer/linkedin.png" alt="LinkedIn" class="social-icon"
+            data-translate="footer_linkedin">
+        </a>
+      </div>
+      <p class="copyright" data-translate="footer_copyright">© 2025 CyberWolf. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Pop-up de succès -->
+  <div id="success-popup" class="popup">
+    <div class="popup-content">
+      <div class="popup-icon">✓</div>
+      <h3 data-translate="popup_title">Message envoyé !</h3>
+      <p data-translate="popup_message">Votre message a été envoyé avec succès.</p>
+      <button class="btn gold" onclick="closePopup()" data-translate="popup_close">Fermer</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/emailjs-init.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/scroll.js"></script>
+  <script src="assets/js/mobile.js"></script>
+</body>
+
+</html>

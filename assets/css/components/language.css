@@ -1,0 +1,36 @@
+@import '../variables.css';
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 2rem;
+  position: relative;
+  z-index: 4;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.language-btn:hover {
+  transform: scale(1.1);
+}
+
+.language-btn.active {
+  box-shadow: 0 0 0 1px var(--light-title);
+}
+
+.language-btn .flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,15 @@
+:root {
+  /* Dark Mode Colors */
+  --dark-primary: #CDA34F;
+  --dark-secondary: #1C1F26;
+  --dark-title: #A3ABB2;
+  --dark-text: #E6E8EB;
+  --dark-background: #1C1F26;
+
+  /* Light Mode Colors */
+  --light-primary: #CDA34F;
+  --light-secondary: #A3ABB2;
+  --light-title: #1C1F26;
+  --light-text: #25282e;
+  --light-background: #E6E8EB;
+}

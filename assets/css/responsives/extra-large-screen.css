@@ -1,0 +1,372 @@
+/* Styles pour les très grands écrans (min-width: 1400px) */
+@media screen and (min-width: 1400px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 1rem 5rem;
+    height: 90px;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .nav-links {
+    gap: 2.5rem;
+  }
+
+  /* CW Section */
+  .CW {
+    padding: 2rem 5rem;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .CW-left {
+    max-width: 50%;
+    z-index: 2;
+    position: relative;
+  }
+
+  .CW-left h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .CW-left h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: var(--light-primary);
+  }
+
+  .CW-left p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .CW-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .CW-buttons .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+
+  .CW-buttons .btn.github {
+    padding: 1rem;
+    min-width: auto;
+  }
+
+  .CW-buttons .btn.github img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .CW-right {
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    height: 100%;
+  }
+
+  .CW-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .CW-right img:hover {
+    transform: scale(1.15);
+  }
+
+  /* About Section */
+  .about {
+    padding: 2rem 5rem;
+  }
+
+  .about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .about h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .rotating-words {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+    min-width: 120px;
+    margin-left: 0.3rem;
+    height: 1.5em;
+    vertical-align: middle;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .rotating-words .word {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--light-primary);
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+    transform: none;
+    font-size: 1.3rem;
+  }
+
+  .rotating-words .word.active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .rotating-words .word.inactive {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .about-left,
+  .about-right {
+    border: 2px solid var(--light-primary);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .about h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-skills {
+    margin: 0.4rem auto;
+    border: 2px solid var(--light-primary);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .about-skills h3 {
+    font-size: 1.3rem;
+    color: var(--light-primary);
+    margin: 0 auto 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+  }
+
+  .about-skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .about-skills li {
+    text-align: center;
+    font-weight: bold;
+    color: var(--light-text);
+    font-size: 1rem;
+    margin: 0.4rem 0;
+    padding: 0;
+  }
+
+  .about-skills li:hover {
+    transform: translateX(5px);
+  }
+
+  /* Portfolio Section */
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 2rem 5rem;
+  }
+
+  .contact-container {
+    max-width: 800px;
+  }
+
+  /* Footer */
+  .footer-content {
+    padding: 0 5rem;
+  }
+
+  .social-links {
+    gap: 2rem;
+  }
+
+  .logo-langages {
+    gap: 2rem;
+  }
+
+  /* Animation Cyber Wolf */
+  .cyber {
+    color: var(--light-primary);
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid var(--light-primary);
+    animation: typing 5.5s linear infinite,
+      cursor .4s step-end infinite alternate;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  @keyframes typing {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    9% {
+      clip-path: inset(0 0 0 0);
+    }
+
+    64% {
+      clip-path: inset(0 0 0 0);
+    }
+
+    73% {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 100% 0 0);
+    }
+  }
+
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* Mode sombre pour l'animation */
+  body.dark-mode .cyber {
+    color: var(--dark-primary);
+    border-right-color: var(--dark-primary);
+  }
+
+  .portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    font-size: 0.9rem;
+  }
+
+  #contact-form button {
+    font-size: 1rem;
+  }
+
+  .popup h3 {
+    font-size: 1.3rem;
+  }
+
+  .popup p {
+    font-size: 1rem;
+  }
+
+  .popup .btn {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+
+  /* Rotating Words */
+  .rotating-words .word {
+    font-size: 1.3rem;
+  }
+
+  .rotating-words-portfolio .word-portfolio {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,581 @@
+/* Styles pour les écrans mobiles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 0.5rem 1rem;
+    height: 60px;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  /* Masquer les éléments de navigation sur mobile */
+  .navbar>.nav-links,
+  .navbar>#language-container,
+  .navbar>#toggle-container {
+    display: none;
+  }
+
+  /* Menu Burger */
+  .burger-btn {
+    display: block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--light-text);
+    z-index: 1001;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger-btn:hover {
+    color: var(--light-primary);
+  }
+
+  .burger-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .menu-mobile.active~.burger-btn .burger-icon {
+    transform: rotate(90deg);
+  }
+
+  /* Menu Mobile */
+  .menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--light-background);
+    padding: 1rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+
+  .menu-mobile.active {
+    right: 0;
+  }
+
+  .menu-mobile .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-mobile .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-mobile .nav-links a {
+    font-size: 1rem;
+    display: block;
+    padding: 0.3rem 0;
+    width: 100%;
+  }
+
+  .menu-mobile .nav-links a::after {
+    display: none;
+  }
+
+  .menu-mobile .nav-links a:hover {
+    color: var(--light-primary);
+    transform: scale(1.05);
+  }
+
+  /* Style spécifique pour le bouton de contact dans le menu mobile */
+  .menu-mobile .nav-links li:last-child a {
+    background-color: var(--light-primary);
+    color: var(--light-background);
+    padding: 0.3rem 1rem;
+    border-radius: 25px;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    font-size: 0.85rem;
+  }
+
+  .menu-mobile .nav-links li:last-child a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Contrôles du menu mobile */
+  .menu-mobile-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  #language-container-mobile,
+  #toggle-container-mobile {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+  }
+
+  #language-container-mobile .language-selector,
+  #toggle-container-mobile .display {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Overlay pour le menu mobile */
+  .overlay-menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .overlay-menu-mobile.active {
+    display: block;
+  }
+
+  /* Réorganisation des éléments du menu mobile */
+  .menu-mobile #language-container,
+  .menu-mobile #toggle-container {
+    margin-top: 1.2rem;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-mobile .language-selector {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-mobile .display {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Ajustements spécifiques pour le sélecteur de langue et le toggle */
+  .menu-mobile #language-container {
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-mobile #toggle-container {
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-mobile .language-selector,
+  .menu-mobile .display {
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* CW Section */
+  .CW {
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 60px;
+    margin-bottom: 0;
+    text-align: center;
+    min-height: auto;
+    gap: 1rem;
+  }
+
+  .CW-left {
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+  }
+
+  .CW-left h1 {
+    font-size: 1.8rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .CW-left h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--light-primary);
+    text-align: center;
+  }
+
+  .CW-left p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .cyber {
+    color: var(--light-primary);
+    position: relative;
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+    overflow: visible;
+    border-right: none;
+    animation: none;
+    clip-path: none;
+  }
+
+  .CW-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .CW-buttons .btn {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .CW-right {
+    display: none;
+  }
+
+  /* About Section */
+  .about {
+    padding: 1rem;
+  }
+
+  .about-container {
+    gap: 1.5rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .about h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .about h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .about h5 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-skills {
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+  .about-skills h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .about-skills li {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .rotating-words {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+    min-width: 120px;
+    margin-left: 0.3rem;
+    height: 1.5em;
+    vertical-align: middle;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .rotating-words .word {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--light-primary);
+    white-space: nowrap;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+  }
+
+  .rotating-words .word.active {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  .rotating-words .word.inactive {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  /* Portfolio Section */
+  .portfolio {
+    padding: 1rem;
+  }
+
+  .portfolio h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio h3 {
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 0.8rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 1rem;
+  }
+
+  .contact-container {
+    max-width: 100%;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .contact h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .form-group .error-message {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #contact-form button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Popup */
+  .popup-content {
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .popup h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .popup p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .popup .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer-content {
+    padding: 1rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-langages {
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 0.8rem 0;
+  }
+
+  .logo-langages img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Mode sombre pour mobile */
+body.dark-mode .menu-mobile {
+  background-color: var(--dark-background);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .burger-btn {
+  color: var(--dark-text);
+}
+
+body.dark-mode .burger-btn:hover {
+  color: var(--dark-primary);
+}
+
+body.dark-mode .nav-links a:hover {
+  color: var(--dark-primary);
+}
+
+/* Mode sombre pour le bouton de contact */
+body.dark-mode .nav-links li:last-child a {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+}
