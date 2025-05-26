@@ -1,6 +1,56 @@
 /* Styles pour les écrans mobiles (max-width: 768px) */
 @media screen and (max-width: 768px) {
 
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ajustement des conteneurs principaux */
+  .CW,
+  .about,
+  .portfolio,
+  .contact {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  /* Ajustement des conteneurs internes */
+  .CW-container,
+  .about-container,
+  .portfolio-container,
+  .contact-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Ajustement des images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ajustement des textes */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
   /* Navbar */
   .navbar {
     padding: 0.5rem 1rem;
