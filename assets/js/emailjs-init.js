@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init(config.emailjs.publicKey);
+  emailjs.init(netlifyConfig.emailjs.publicKey);
 }); 

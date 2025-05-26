@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
         message: messageInput.value
       };
 
-      emailjs.send(config.emailjs.serviceId, config.emailjs.templateId, templateParams)
+      emailjs.send(netlifyConfig.emailjs.serviceId, netlifyConfig.emailjs.templateId, templateParams)
         .then(function (response) {
           showPopup();
           form.reset();
