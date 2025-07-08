@@ -71,7 +71,6 @@ p {
   color: var(--light-text);
 }
 
-/* Point d'ancrage */
 #top {
   position: absolute;
   top: 0;
@@ -80,7 +79,6 @@ p {
   height: 0;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -98,7 +96,6 @@ p {
   gap: 2rem;
 }
 
-/* Menu Burger - caché par défaut */
 .burger-btn {
   display: none;
 }
@@ -111,7 +108,6 @@ p {
   display: none;
 }
 
-/* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -122,14 +118,12 @@ p {
   align-items: center;
 }
 
-/* Language Selector et Toggle - visibles par défaut */
 #language-container,
 #toggle-container {
   display: flex;
   align-items: center;
 }
 
-/* Logo */
 .logo {
   height: 70px;
   width: 70px;
@@ -153,7 +147,6 @@ p {
   transition: filter 0.3s ease;
 }
 
-/* Navbar Links */
 .nav-links a {
   font-size: 1rem;
   font-weight: 500;
@@ -189,7 +182,6 @@ p {
   color: var(--light-primary);
 }
 
-/* Style spécifique pour le bouton de contact */
 .nav-links li:last-child a {
   background-color: var(--light-primary);
   color: var(--light-background);
@@ -211,7 +203,6 @@ p {
   display: none;
 }
 
-/* CW Section */
 .CW {
   display: flex;
   justify-content: space-between;
@@ -612,7 +603,6 @@ html {
   scroll-padding-top: 90px;
 }
 
-/* Contact Section */
 .contact {
   width: 100%;
   padding: 0.22rem 3rem;
@@ -717,7 +707,6 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Style spécifique pour les placeholders */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   font-size: 0.9rem;
@@ -780,7 +769,6 @@ html {
   flex: 1;
 }
 
-/* Pop-up de succès */
 .popup {
   display: none;
   position: fixed;
@@ -870,8 +858,6 @@ html {
   }
 }
 
-/* Portfolio */
-
 #portfolio {
   width: 100%;
   padding: 0.5rem 3rem;
@@ -904,7 +890,6 @@ html {
   align-self: flex-start;
 }
 
-/* Footer */
 .footer {
   background-color: var(--light-background);
   padding: 1.5rem 0;

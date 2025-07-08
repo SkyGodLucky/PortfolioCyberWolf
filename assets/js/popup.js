@@ -8,7 +8,6 @@ function closePopup() {
   popup.classList.remove('active');
 }
 
-// Fermer la pop-up en cliquant en dehors
 document.addEventListener('click', function (event) {
   const popup = document.getElementById('success-popup');
   if (event.target === popup) {

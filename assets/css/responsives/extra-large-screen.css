@@ -1,4 +1,4 @@
-/* Styles pour les très grands écrans (min-width: 1400px) */
+
 @media screen and (min-width: 1400px) {
   html {
     scroll-behavior: smooth !important;
@@ -11,7 +11,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Navbar */
+  
   .navbar {
     padding: 1rem 5rem;
     height: 90px;
@@ -26,7 +26,7 @@
     gap: 2.5rem;
   }
 
-  /* CW Section */
+  
   .CW {
     padding: 2rem 5rem;
     margin-top: 90px;
@@ -109,7 +109,7 @@
     transform: scale(1.05);
   }
 
-  /* About Section */
+  
   .about {
     padding: 2rem 5rem;
   }
@@ -245,14 +245,14 @@
     transform: translateX(5px);
   }
 
-  /* Portfolio Section */
+  
   .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     padding: 3rem;
   }
 
-  /* Contact Section */
+  
   .contact {
     padding: 3rem 5rem;
   }
@@ -320,7 +320,7 @@
     margin-top: 1rem;
   }
 
-  /* Footer */
+  
   .footer-content {
     padding: 0 5rem;
   }
@@ -333,7 +333,7 @@
     gap: 2rem;
   }
 
-  /* Animation Cyber Wolf */
+  
   .cyber {
     color: var(--light-primary);
     white-space: nowrap;
@@ -372,7 +372,7 @@
     }
   }
 
-  /* Mode sombre pour l'animation */
+  
   body.dark-mode .cyber {
     color: var(--dark-primary);
     border-right-color: var(--dark-primary);
@@ -404,7 +404,7 @@
     font-size: 1rem;
   }
 
-  /* Rotating Words */
+  
   .rotating-words .word {
     font-size: 1.3rem;
   }

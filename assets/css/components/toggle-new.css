@@ -1,4 +1,4 @@
-/* ===== Global Theme Transition ===== */
+
 body {
   transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease;
 }
@@ -7,9 +7,9 @@ body * {
   transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* ===== Toggle Switch ===== */
 
-/* Base Structure */
+
+
 input[type=checkbox] {
   display: none;
 }
@@ -22,7 +22,7 @@ input[type=checkbox] {
   margin-left: 2rem;
 }
 
-/* Toggle Container */
+
 .display label {
   width: 50px;
   height: 26px;
@@ -34,7 +34,7 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
-/* Toggle Circle */
+
 .circle {
   width: 20px;
   height: 20px;
@@ -50,7 +50,7 @@ input[type=checkbox] {
   overflow: hidden;
 }
 
-/* Icons */
+
 .sun,
 .moon {
   width: 14px;
@@ -73,7 +73,7 @@ input[type=checkbox] {
   transform: translate(-50%, 100%);
 }
 
-/* Toggle States */
+
 input[type=checkbox]:checked+.display label .circle {
   left: 27px;
 }
@@ -88,15 +88,15 @@ input[type=checkbox]:checked+.display label .moon {
   transform: translate(-50%, -50%);
 }
 
-/* Active State */
+
 label:active .circle {
   width: 28px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===== Dark Mode Styles ===== */
 
-/* Base Styles */
+
+
 body.dark-mode {
   background-image: radial-gradient(circle at 7% 60%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 44%, transparent 44%, transparent 100%), radial-gradient(circle at 66% 79%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 31%, transparent 31%, transparent 100%), radial-gradient(circle at 25% 6%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 44%, transparent 44%, transparent 100%), radial-gradient(circle at 18% 89%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 37%, transparent 37%, transparent 100%), radial-gradient(circle at 33% 2%, rgba(230, 232, 235, 0.01) 0%, rgba(230, 232, 235, 0.01) 73%, transparent 73%, transparent 100%), linear-gradient(0deg, rgb(28, 31, 38), rgb(28, 31, 38));
   color: var(--dark-text);
@@ -108,9 +108,9 @@ body.dark-mode h3 {
   color: var(--dark-title);
 }
 
-/* ===== Navigation ===== */
 
-/* Navbar Links */
+
+
 body.dark-mode .nav-links a {
   color: var(--dark-text);
 }
@@ -124,7 +124,7 @@ body.dark-mode .nav-links a::after {
   background-color: var(--dark-primary);
 }
 
-/* Contact Button */
+
 body.dark-mode .nav-links li:last-child a {
   background-color: var(--dark-primary);
   color: var(--dark-background);
@@ -140,9 +140,9 @@ body.dark-mode .nav-links li:last-child a:hover::after {
   display: none;
 }
 
-/* ===== CW Section ===== */
 
-/* Logo */
+
+
 body:not(.dark-mode) .logo img {
   filter: brightness(0);
 }
@@ -151,7 +151,7 @@ body.dark-mode .logo img {
   filter: none;
 }
 
-/* CW Section Buttons */
+
 body.dark-mode .CW-buttons .btn.gold {
   background-color: var(--dark-primary);
   color: var(--dark-background);
@@ -176,7 +176,7 @@ body.dark-mode .CW-buttons .btn.github:hover {
   box-shadow: none;
 }
 
-/* CW Section Text */
+
 body.dark-mode .CW-left h1 {
   color: var(--dark-title);
 }
@@ -193,19 +193,19 @@ body.dark-mode .CW-left p {
   color: var(--dark-text);
 }
 
-/* ===== Theme Toggle Dark Mode ===== */
 
-/* Display Label */
+
+
 body.dark-mode .display label {
   background: var(--dark-background);
 }
 
-/* Circle */
+
 body.dark-mode .circle {
   background: var(--dark-primary);
 }
 
-/* Checked States */
+
 body.dark-mode input[type=checkbox]:checked+.display label {
   background: #0b0c0f;
 }
@@ -214,7 +214,7 @@ body.dark-mode input[type=checkbox]:checked+.display label .circle {
   background: var(--dark-background);
 }
 
-/* Icons */
+
 body.dark-mode .sun {
   color: var(--dark-background);
 }
@@ -223,12 +223,12 @@ body.dark-mode .moon {
   color: #FFFFFF;
 }
 
-/* About Section */
+
 body.dark-mode .about h3 {
   color: var(--dark-text);
 }
 
-/* ===== About Section Dark Mode ===== */
+
 body.dark-mode .about h2 {
   color: var(--dark-title);
 }
@@ -262,7 +262,7 @@ body.dark-mode .about-skills li {
   color: var(--dark-text);
 }
 
-/* Contact section dark mode */
+
 .dark-mode .contact {
   background-color: var(--dark-bg);
 }
@@ -341,7 +341,7 @@ body.dark-mode .about-skills li {
   border: 2px solid var(--dark-primary) !important;
 }
 
-/* Mode sombre pour la pop-up */
+
 body.dark-mode .popup-content {
   background-color: rgba(28, 31, 38, 0.85);
   backdrop-filter: blur(10px);
@@ -384,7 +384,7 @@ body.dark-mode .popup-icon {
   box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
 }
 
-/* Mode sombre pour le footer */
+
 body.dark-mode .footer {
   background-color: var(--dark-background);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
@@ -417,18 +417,18 @@ body.dark-mode .copyright {
   opacity: 0.9;
 }
 
-/* Dark Mode Styles */
+
 body.dark-mode .language-btn.active {
   box-shadow: 0 0 0 1px var(--dark-primary);
 }
 
-/* Mode sombre pour la navbar */
+
 body.dark-mode .navbar {
   background-color: var(--dark-background);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Portfolio Section */
+
 body.dark-mode .portfolio h2 {
   color: var(--dark-title);
 }
@@ -447,14 +447,14 @@ body.dark-mode .logo-langages img[alt="Node.js"] {
   filter: brightness(0) invert(1);
 }
 
-/* Toggle Container */
+
 #toggle-container {
   display: flex;
   align-items: center;
   margin-left: 1rem;
 }
 
-/* Toggle Switch */
+
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -503,7 +503,7 @@ input:checked+.toggle-slider:before {
   background-color: var(--dark-primary);
 }
 
-/* Dark Mode Styles */
+
 body.dark-mode {
   background-color: var(--dark-background);
   color: var(--dark-text);
@@ -548,7 +548,7 @@ body.dark-mode .project-link {
   color: var(--dark-primary);
 }
 
-/* Toggle Icons */
+
 .toggle-icons {
   position: absolute;
   top: 50%;
@@ -569,7 +569,7 @@ body.dark-mode .toggle-icons i {
   color: var(--dark-primary);
 }
 
-/* Toggle Animation */
+
 .toggle-slider:before {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

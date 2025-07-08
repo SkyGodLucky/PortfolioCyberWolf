@@ -265,17 +265,17 @@ function updateContent(lang) {
     buttons[1].textContent = translations[lang].contactMe;
   }
 
-  // Update About section
+  // Actualisation du texte de la section À propos
   const aboutSection = document.querySelector('.about');
   if (aboutSection) {
     aboutSection.querySelector('h2').textContent = translations[lang].aboutMe;
     aboutSection.querySelector('h3').innerHTML = translations[lang].aboutMeDescription;
 
-    // Update formations and experiences
+    // Actualisation du texte des formations et expériences
     aboutSection.querySelector('.about-left h4').textContent = translations[lang].formations;
     aboutSection.querySelector('.about-right h4').textContent = translations[lang].experiences;
 
-    // Update formation titles and descriptions
+    // Actualisation du texte des titres et descriptions des formations
     const formationTitles = aboutSection.querySelectorAll('.about-left h5');
     const formationDescs = aboutSection.querySelectorAll('.about-left p');
     formationTitles[0].textContent = translations[lang].formation1;
@@ -283,13 +283,13 @@ function updateContent(lang) {
     formationDescs[0].innerHTML = translations[lang].formation1Desc;
     formationDescs[1].innerHTML = translations[lang].formation2Desc;
 
-    // Update experience title and description
+    // Actualisation du texte du titre et description de l'expérience
     const experienceTitle = aboutSection.querySelector('.about-right h5');
     const experienceDesc = aboutSection.querySelector('.about-right p');
     experienceTitle.textContent = translations[lang].experience1;
     experienceDesc.innerHTML = translations[lang].experience1Desc;
 
-    // Update skills section
+    // Actualisation du texte de la section Compétences transverses
     const skillsSection = aboutSection.querySelector('.about-skills');
     if (skillsSection) {
       skillsSection.querySelector('h3').textContent = translations[lang].skills;
@@ -303,7 +303,7 @@ function updateContent(lang) {
     }
   }
 
-  // Update Portfolio section
+  // Actualisation du texte de la section Portfolio
   const portfolioSection = document.querySelector('.portfolio');
   if (portfolioSection) {
     portfolioSection.querySelector('h2').textContent = translations[lang].portfolio_title;
@@ -312,7 +312,7 @@ function updateContent(lang) {
     h3.innerHTML = translations[lang].portfolio_subtitle + ' ';
     h3.appendChild(rotatingWords);
 
-    // Mettre à jour les cartes de projet
+    // Actualisation du texte des cartes de projet
     const projects = [
       { id: 'pendu', title: 'project_pendu_title', desc: 'project_pendu_desc' },
       { id: 'labyrinthe', title: 'project_labyrinthe_title', desc: 'project_labyrinthe_desc' },
@@ -339,7 +339,7 @@ function updateContent(lang) {
     });
   }
 
-  // Update Contact section
+  // Actualisation du texte de la section Contact
   const contactSection = document.querySelector('.contact');
   if (contactSection) {
     contactSection.querySelector('h2').textContent = translations[lang].contact.title;
@@ -347,7 +347,7 @@ function updateContent(lang) {
 
     const form = document.getElementById('contact-form');
     if (form) {
-      // Update labels
+      // Actualisation du texte des labels
       const labels = form.querySelectorAll('.form-group label');
       labels[0].textContent = translations[lang].contact.name;
       labels[1].textContent = translations[lang].contact.firstName;
@@ -356,7 +356,7 @@ function updateContent(lang) {
       labels[4].textContent = translations[lang].subject;
       labels[5].textContent = translations[lang].contact.message;
 
-      // Update placeholders
+      // Actualisation du texte des placeholders
       const inputs = form.querySelectorAll('.form-group input, .form-group textarea');
       inputs[0].placeholder = translations[lang].contact.placeholders.name;
       inputs[1].placeholder = translations[lang].contact.placeholders.firstName;
@@ -365,12 +365,12 @@ function updateContent(lang) {
       inputs[4].placeholder = translations[lang].subject_placeholder;
       inputs[5].placeholder = translations[lang].contact.placeholders.message;
 
-      // Update button
+      // Actualisation du texte du bouton
       form.querySelector('button').textContent = translations[lang].contact.send;
     }
   }
 
-  // Update popup content
+  // Actualisation du texte du popup
   const popup = document.getElementById('success-popup');
   if (popup) {
     popup.querySelector('h3').textContent = translations[lang].popup_title;
@@ -378,13 +378,13 @@ function updateContent(lang) {
     popup.querySelector('button').textContent = translations[lang].popup_close;
   }
 
-  // Mise à jour du copyright
+  // Actualisation du texte du copyright
   const copyright = document.querySelector('.copyright');
   if (copyright) {
     copyright.textContent = translations[lang].footer_copyright;
   }
 
-  // Mise à jour des attributs alt des icônes sociales
+  // Actualisation des attributs alt des icônes sociales
   const socialIcons = document.querySelectorAll('.social-icon');
   socialIcons.forEach(icon => {
     const platform = icon.alt.toLowerCase();
@@ -394,7 +394,7 @@ function updateContent(lang) {
   });
 }
 
-// Load language selector and initialize
+// Chargement du sélecteur de langue et initialisation
 document.addEventListener('DOMContentLoaded', () => {
   fetch('components/language.html')
     .then(response => response.text())

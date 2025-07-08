@@ -1,4 +1,4 @@
-// Initialize theme after toggle is loaded
+// Initialisation du thème après le chargement du toggle
 function initializeTheme() {
   const toggleSwitch = document.querySelector('input[type="checkbox"]');
   const currentTheme = localStorage.getItem('theme') || 'light-mode';
@@ -21,7 +21,7 @@ function initializeTheme() {
   });
 }
 
-// Load toggle component and initialize theme
+// Chargement du composant toggle et initialisation du thème
 document.addEventListener('DOMContentLoaded', () => {
   fetch('components/toggle.html')
     .then(response => response.text())

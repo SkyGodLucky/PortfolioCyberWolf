@@ -1,4 +1,4 @@
-/* Styles pour les écrans mobiles (max-width: 768px) */
+
 @media screen and (max-width: 768px) {
 
   html,
@@ -16,7 +16,7 @@
     max-width: 100%;
   }
 
-  /* Ajustement des conteneurs principaux */
+  
   .CW,
   .about,
   .portfolio,
@@ -27,7 +27,7 @@
     overflow-x: hidden;
   }
 
-  /* Ajustement des conteneurs internes */
+  
   .CW-container,
   .about-container,
   .portfolio-container,
@@ -38,7 +38,7 @@
     overflow-x: hidden;
   }
 
-  /* Ajustement des images */
+  
   img {
     width: 100%;
     height: auto;
@@ -46,7 +46,7 @@
     max-width: 100%;
   }
 
-  /* Ajustement des textes */
+  
   h1 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -79,7 +79,7 @@
     margin-bottom: 0.5rem;
   }
 
-  /* Ajustement des grilles et flexbox */
+  
   .about-content {
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@
     overflow-x: hidden;
   }
 
-  /* Navbar */
+  
   .navbar {
     padding: 0.5rem;
     height: 50px;
@@ -113,14 +113,14 @@
     width: 35px;
   }
 
-  /* Masquer les éléments de navigation sur mobile */
+  
   .navbar>.nav-links,
   .navbar>#language-container,
   .navbar>#toggle-container {
     display: none;
   }
 
-  /* Menu Burger */
+  
   .burger-btn {
     display: block;
     font-size: 1rem;
@@ -149,7 +149,7 @@
     transform: rotate(90deg);
   }
 
-  /* Menu Mobile */
+  
   .menu-mobile {
     position: fixed;
     top: 0;
@@ -203,7 +203,7 @@
     transform: scale(1.05);
   }
 
-  /* Style spécifique pour le bouton de contact dans le menu mobile */
+  
   .menu-mobile .nav-links li:last-child a {
     background-color: var(--light-primary);
     color: var(--light-background);
@@ -220,7 +220,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
-  /* Contrôles du menu mobile */
+  
   .menu-mobile-controls {
     display: flex;
     flex-direction: column;
@@ -248,7 +248,7 @@
     width: 100%;
   }
 
-  /* Overlay pour le menu mobile */
+  
   .overlay-menu-mobile {
     display: none;
     position: fixed;
@@ -266,7 +266,7 @@
     display: block;
   }
 
-  /* Réorganisation des éléments du menu mobile */
+  
   .menu-mobile #language-container,
   .menu-mobile #toggle-container {
     margin-top: 1.2rem;
@@ -288,7 +288,7 @@
     justify-content: center;
   }
 
-  /* Ajustements spécifiques pour le sélecteur de langue et le toggle */
+  
   .menu-mobile #language-container {
     display: flex !important;
     visibility: visible;
@@ -308,7 +308,7 @@
     opacity: 1;
   }
 
-  /* CW Section */
+  
   .CW {
     flex-direction: column;
     padding: 0.5rem;
@@ -384,7 +384,7 @@
     display: none;
   }
 
-  /* About Section */
+  
   .about {
     padding: 0.5rem;
   }
@@ -493,7 +493,7 @@
     transform: translateY(-100%);
   }
 
-  /* Portfolio Section */
+  
   .portfolio {
     padding: 0.5rem;
   }
@@ -530,7 +530,7 @@
     margin-bottom: 0.6rem;
   }
 
-  /* Contact Section */
+  
   .contact {
     padding: 0.5rem;
     width: 100%;
@@ -611,7 +611,7 @@
     margin: 0 auto;
   }
 
-  /* Popup */
+  
   .popup-content {
     padding: 1rem;
     width: 85%;
@@ -633,7 +633,7 @@
     padding: 0.4rem 1rem;
   }
 
-  /* Footer */
+  
   .footer {
     padding: 0.5rem 0;
   }
@@ -674,7 +674,7 @@
   }
 }
 
-/* Mode sombre pour mobile */
+
 body.dark-mode .menu-mobile {
   background-color: var(--dark-background);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
@@ -692,7 +692,7 @@ body.dark-mode .nav-links a:hover {
   color: var(--dark-primary);
 }
 
-/* Mode sombre pour le bouton de contact */
+
 body.dark-mode .nav-links li:last-child a {
   background-color: var(--dark-primary);
   color: var(--dark-background);
